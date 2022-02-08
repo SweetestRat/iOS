@@ -8,8 +8,9 @@ class TiledView: UIView {
     public var unactiveCellLightColor = UIColor.systemGray3.cgColor
     public var unactiveCellDarkColor = UIColor.systemGray2.cgColor
     public var shadowedCellColor = UIColor.systemGray.cgColor
+    public var readyToDissapearColor = UIColor.blue.cgColor
     public var cellsState: [[CellState]]?
-    public var boundSizeDevider = 60
+    public var boundSizeDevider = 40
 
     override class var layerClass: AnyClass { CATiledLayer.self }
 
@@ -32,7 +33,7 @@ class TiledView: UIView {
         let rowNum = Int(rect.origin.y) / cellHeight
         
         guard let letcellsState = cellsState else {return}
-        if (rowNum < letcellsState.count && colNum < letcellsState[0].count) {
+        if rowNum < letcellsState.count && colNum < letcellsState[0].count {
             switch letcellsState[rowNum][colNum] {
             case .active:
                 context.setFillColor(activeCellColor)
