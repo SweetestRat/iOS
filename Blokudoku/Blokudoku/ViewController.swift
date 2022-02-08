@@ -28,13 +28,27 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
         
+        setNavigationBar()
+        setTable()
+        setFigures()
+        setDraggableView()
+        
+        addSubviews()
+        setConstraints()
+        
+    }
+    
+    let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+    let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
+    
+    func setNavigationBar() {
+        
         let leftArrow = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backAction))
         navigationItem.leftBarButtonItem = leftArrow
         
         lightTheme = UIBarButtonItem(image: UIImage(systemName: "paintpalette"), style: .plain, target: self, action: #selector(changeTheme))
         darkTheme = UIBarButtonItem(image: UIImage(systemName: "paintpalette.fill"), style: .plain, target: self, action: #selector(changeTheme))
         
-        //let theme = UIBarButtonItem(image: UIImage(systemName: "paintpalette"), style: .plain, target: self, action: #selector(changeTheme))
         let settings = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(goToSettings))
         
         navigationItem.rightBarButtonItems = [settings, lightTheme]
@@ -42,7 +56,10 @@ class ViewController: UIViewController {
         score = UILabel()
         score.text = "0"
         score.textColor = UIColor.init(red: 44/255, green: 55/255, blue: 84/255, alpha: 1)
-                
+    }
+    
+    func setTable() {
+        
         table = TiledView()
         table.cellsState = Array.init(repeating: Array.init(repeating: .unactive, count: 9), count: 9)
         
@@ -55,6 +72,9 @@ class ViewController: UIViewController {
         table.backgroundColor = .systemBackground
         table.layer.borderWidth = 2
         table.layer.borderColor = UIColor.systemGray.cgColor
+    }
+    
+    func setFigures() {
         
         figure1 = TiledView()
         figure2 = TiledView()
@@ -87,14 +107,9 @@ class ViewController: UIViewController {
                 $0.backgroundColor = .white.withAlphaComponent(0)
                 $0.tiledLayer.tileSize = CGSize(width: figureTileSize, height: figureTileSize)
             }
-        
-        guard let figure1CellsState = figure1.cellsState else { return }
-        guard let figure2CellsState = figure2.cellsState else { return }
-        guard let figure3CellsState = figure3.cellsState else { return }
-        
-        figure1WidthConstraint = figure1.widthAnchor.constraint(equalToConstant: CGFloat(figure1CellsState[0].count) * figure1.tiledLayer.tileSize.width)
-        figure2WidthConstraint = figure2.widthAnchor.constraint(equalToConstant: CGFloat(figure2CellsState[0].count) * figure2.tiledLayer.tileSize.width)
-        figure3WidthConstraint = figure3.widthAnchor.constraint(equalToConstant: CGFloat(figure3CellsState[0].count) * figure3.tiledLayer.tileSize.width)
+    }
+    
+    func setDraggableView() {
         
         draggableView = TiledView()
         
@@ -106,19 +121,27 @@ class ViewController: UIViewController {
         draggableView.tiledLayer.tileSize = CGSize(width: draggableFigureTileSize, height: draggableFigureTileSize)
         draggableView.boundSizeDevider = 10
         draggableView.isHidden = true
+    }
+    
+    func addSubviews() {
         
-        [
-            score,
-            table,
-            figure1,
-            figure2,
-            figure3,
-            draggableView
-        ].compactMap { $0 }
+        [ score, table, figure1, figure2, figure3, draggableView].compactMap { $0 }
         .forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
+
+    }
+    
+    func setConstraints() {
+        
+        guard let figure1CellsState = figure1.cellsState else { return }
+        guard let figure2CellsState = figure2.cellsState else { return }
+        guard let figure3CellsState = figure3.cellsState else { return }
+        
+        figure1WidthConstraint = figure1.widthAnchor.constraint(equalToConstant: CGFloat(figure1CellsState[0].count) * figure1.tiledLayer.tileSize.width)
+        figure2WidthConstraint = figure2.widthAnchor.constraint(equalToConstant: CGFloat(figure2CellsState[0].count) * figure2.tiledLayer.tileSize.width)
+        figure3WidthConstraint = figure3.widthAnchor.constraint(equalToConstant: CGFloat(figure3CellsState[0].count) * figure3.tiledLayer.tileSize.width)
 
         
         NSLayoutConstraint.activate([
@@ -130,21 +153,16 @@ class ViewController: UIViewController {
             table.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             table.topAnchor.constraint(equalTo: score.bottomAnchor, constant: 80),
             
-            //figure1.leadingAnchor.constraint(equalTo: table.leadingAnchor),
             figure1.centerXAnchor.constraint(equalTo: table.leadingAnchor, constant: (view.frame.width - 50) / 3 / 2),
-            //figure3.trailingAnchor.constraint(equalTo: table.trailingAnchor),
             figure3.centerXAnchor.constraint(equalTo: table.trailingAnchor, constant: -(view.frame.width - 50) / 3 / 2),
             figure2.centerXAnchor.constraint(equalTo: table.centerXAnchor),
             
-//            figure1.widthAnchor.constraint(equalTo: table.widthAnchor, multiplier: 1/3, constant: -10),
             figure1.heightAnchor.constraint(equalTo: table.heightAnchor, multiplier: 1/3, constant: -10),
             figure1.topAnchor.constraint(equalTo: table.bottomAnchor, constant: 20),
             
-//            figure2.widthAnchor.constraint(equalTo: table.widthAnchor, multiplier: 1/3, constant: -10),
             figure2.heightAnchor.constraint(equalTo: table.heightAnchor, multiplier: 1/3, constant: -10),
             figure2.topAnchor.constraint(equalTo: table.bottomAnchor, constant: 20),
             
-//            figure3.widthAnchor.constraint(equalTo: table.widthAnchor, multiplier: 1/3, constant: -10),
             figure3.heightAnchor.constraint(equalTo: table.heightAnchor, multiplier: 1/3, constant: -10),
             figure3.topAnchor.constraint(equalTo: table.bottomAnchor, constant: 20),
             
@@ -153,11 +171,7 @@ class ViewController: UIViewController {
             figure3WidthConstraint
             
         ])
-        
     }
-    
-    let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
-    let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let point = touches.first?.location(in: view)
@@ -242,10 +256,11 @@ class ViewController: UIViewController {
                 for x in 0..<tableCellsState[y].count {
                     if tableCellsState[y][x] == .shadowed {
                         tableCellsState[y][x] = .unactive
-                        table.cellsState = tableCellsState
                     }
                 }
             }
+            
+            table.cellsState = tableCellsState
             
             if  xPointIn >= 0 &&
                 yPointIn >= 0 &&

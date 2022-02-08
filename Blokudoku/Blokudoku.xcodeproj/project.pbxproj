@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		2D64141227ADCF6B00ACFF44 /* CellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellState.swift; sourceTree = "<group>"; };
+		2D64141427B0704200ACFF44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2D96BCF827AAF5E10071B2F6 /* Blokudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blokudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D96BCFB27AAF5E10071B2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D96BCFD27AAF5E10071B2F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +45,7 @@
 		2D96BCEF27AAF5E10071B2F6 = {
 			isa = PBXGroup;
 			children = (
-				2D64141227ADCF6B00ACFF44 /* CellState.swift */,
+				2D64141427B0704200ACFF44 /* README.md */,
 				2D96BCFA27AAF5E10071B2F6 /* Blokudoku */,
 				2D96BCF927AAF5E10071B2F6 /* Products */,
 			);
@@ -68,6 +69,7 @@
 				2D96BD0427AAF5E30071B2F6 /* Assets.xcassets */,
 				2D96BD0627AAF5E30071B2F6 /* LaunchScreen.storyboard */,
 				2D96BD0927AAF5E30071B2F6 /* Info.plist */,
+				2D64141227ADCF6B00ACFF44 /* CellState.swift */,
 				2D96BD0F27AB0B6F0071B2F6 /* TiledView.swift */,
 			);
 			path = Blokudoku;
