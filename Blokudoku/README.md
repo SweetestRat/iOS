@@ -12,4 +12,4 @@ Blokudoku project is a simple game inspired by the app of the same name
 
 - Square, columns and rows removing 
 
-<img src="https://s10.gifyu.com/images/download-2ede094bea5fdce25.gif" width="261" height="565"/> <img src="https://s10.gifyu.com/images/download-3a3e48de96dd0c9c9.gif" width="261" height="565"/>
+<img src="https://s10.gifyu.com/images/download-2ede094bea5fdce25.gif" width="261" height="565"/> <img src="https://s10.gifyu.com/images/download-3a3e48de96dd0c9c9.gif" width="261" height="565"/> <img src="https://s10.gifyu.com/images/download-482d984d773e283e2.gif" width="261" height="565"/>
