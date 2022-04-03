@@ -8,7 +8,7 @@
 import UIKit
 import VK_ios_sdk
 
-final class ViewController: UIViewController {
+final class MainViewController: UIViewController {
     var galleryLabel: UILabel!
     var loginVKButton: UIButton!
 
@@ -104,7 +104,7 @@ final class ViewController: UIViewController {
     }
 }
 
-extension ViewController: VKSdkDelegate, VKSdkUIDelegate {
+extension MainViewController: VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkShouldPresent(_ controller: UIViewController!) {
         present(controller, animated: true, completion: {})
     }

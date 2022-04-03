@@ -1,0 +1,6 @@
+framework module Pods_Mobile_Up_Gallery_Mobile_Up_GalleryUITests {
+  umbrella header "Pods-Mobile Up Gallery-Mobile Up GalleryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
