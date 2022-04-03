@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DD7DBAF27F5B23B00EAC707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBAE27F5B23B00EAC707 /* AppDelegate.swift */; };
+		2DD7DBB127F5B23B00EAC707 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBB027F5B23B00EAC707 /* SceneDelegate.swift */; };
+		2DD7DBB327F5B23B00EAC707 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBB227F5B23B00EAC707 /* ViewController.swift */; };
+		2DD7DBB627F5B23B00EAC707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7DBB427F5B23B00EAC707 /* Main.storyboard */; };
+		2DD7DBB927F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBB727F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld */; };
+		2DD7DBBB27F5B23E00EAC707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7DBBA27F5B23E00EAC707 /* Assets.xcassets */; };
+		2DD7DBBE27F5B23E00EAC707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7DBBC27F5B23E00EAC707 /* LaunchScreen.storyboard */; };
+		2DD7DBC927F5B24000EAC707 /* Mobile_Up_GalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBC827F5B24000EAC707 /* Mobile_Up_GalleryTests.swift */; };
+		2DD7DBD327F5B24000EAC707 /* Mobile_Up_GalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBD227F5B24000EAC707 /* Mobile_Up_GalleryUITests.swift */; };
+		2DD7DBD527F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBD427F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DD7DBC527F5B24000EAC707 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DD7DBA327F5B23A00EAC707 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DD7DBAA27F5B23A00EAC707;
+			remoteInfo = "Mobile Up Gallery";
+		};
+		2DD7DBCF27F5B24000EAC707 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DD7DBA327F5B23A00EAC707 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DD7DBAA27F5B23A00EAC707;
+			remoteInfo = "Mobile Up Gallery";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DD7DBAB27F5B23A00EAC707 /* Mobile Up Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Up Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD7DBAE27F5B23B00EAC707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DD7DBB027F5B23B00EAC707 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2DD7DBB227F5B23B00EAC707 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DD7DBB527F5B23B00EAC707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2DD7DBB827F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mobile_Up_Gallery.xcdatamodel; sourceTree = "<group>"; };
+		2DD7DBBA27F5B23E00EAC707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DD7DBBD27F5B23E00EAC707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DD7DBBF27F5B23E00EAC707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD7DBC427F5B24000EAC707 /* Mobile Up GalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Up GalleryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD7DBC827F5B24000EAC707 /* Mobile_Up_GalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Up_GalleryTests.swift; sourceTree = "<group>"; };
+		2DD7DBCE27F5B24000EAC707 /* Mobile Up GalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Up GalleryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD7DBD227F5B24000EAC707 /* Mobile_Up_GalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Up_GalleryUITests.swift; sourceTree = "<group>"; };
+		2DD7DBD427F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Up_GalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DD7DBA827F5B23A00EAC707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7DBC127F5B24000EAC707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7DBCB27F5B24000EAC707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DD7DBA227F5B23A00EAC707 = {
+			isa = PBXGroup;
+			children = (
+				2DD7DBAD27F5B23A00EAC707 /* Mobile Up Gallery */,
+				2DD7DBC727F5B24000EAC707 /* Mobile Up GalleryTests */,
+				2DD7DBD127F5B24000EAC707 /* Mobile Up GalleryUITests */,
+				2DD7DBAC27F5B23A00EAC707 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DD7DBAC27F5B23A00EAC707 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7DBAB27F5B23A00EAC707 /* Mobile Up Gallery.app */,
+				2DD7DBC427F5B24000EAC707 /* Mobile Up GalleryTests.xctest */,
+				2DD7DBCE27F5B24000EAC707 /* Mobile Up GalleryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DD7DBAD27F5B23A00EAC707 /* Mobile Up Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7DBAE27F5B23B00EAC707 /* AppDelegate.swift */,
+				2DD7DBB027F5B23B00EAC707 /* SceneDelegate.swift */,
+				2DD7DBB227F5B23B00EAC707 /* ViewController.swift */,
+				2DD7DBB427F5B23B00EAC707 /* Main.storyboard */,
+				2DD7DBBA27F5B23E00EAC707 /* Assets.xcassets */,
+				2DD7DBBC27F5B23E00EAC707 /* LaunchScreen.storyboard */,
+				2DD7DBBF27F5B23E00EAC707 /* Info.plist */,
+				2DD7DBB727F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld */,
+			);
+			path = "Mobile Up Gallery";
+			sourceTree = "<group>";
+		};
+		2DD7DBC727F5B24000EAC707 /* Mobile Up GalleryTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7DBC827F5B24000EAC707 /* Mobile_Up_GalleryTests.swift */,
+			);
+			path = "Mobile Up GalleryTests";
+			sourceTree = "<group>";
+		};
+		2DD7DBD127F5B24000EAC707 /* Mobile Up GalleryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7DBD227F5B24000EAC707 /* Mobile_Up_GalleryUITests.swift */,
+				2DD7DBD427F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift */,
+			);
+			path = "Mobile Up GalleryUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DD7DBAA27F5B23A00EAC707 /* Mobile Up Gallery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DD7DBD827F5B24000EAC707 /* Build configuration list for PBXNativeTarget "Mobile Up Gallery" */;
+			buildPhases = (
+				2DD7DBA727F5B23A00EAC707 /* Sources */,
+				2DD7DBA827F5B23A00EAC707 /* Frameworks */,
+				2DD7DBA927F5B23A00EAC707 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mobile Up Gallery";
+			productName = "Mobile Up Gallery";
+			productReference = 2DD7DBAB27F5B23A00EAC707 /* Mobile Up Gallery.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DD7DBC327F5B24000EAC707 /* Mobile Up GalleryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DD7DBDB27F5B24000EAC707 /* Build configuration list for PBXNativeTarget "Mobile Up GalleryTests" */;
+			buildPhases = (
+				2DD7DBC027F5B24000EAC707 /* Sources */,
+				2DD7DBC127F5B24000EAC707 /* Frameworks */,
+				2DD7DBC227F5B24000EAC707 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DD7DBC627F5B24000EAC707 /* PBXTargetDependency */,
+			);
+			name = "Mobile Up GalleryTests";
+			productName = "Mobile Up GalleryTests";
+			productReference = 2DD7DBC427F5B24000EAC707 /* Mobile Up GalleryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DD7DBCD27F5B24000EAC707 /* Mobile Up GalleryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DD7DBDE27F5B24000EAC707 /* Build configuration list for PBXNativeTarget "Mobile Up GalleryUITests" */;
+			buildPhases = (
+				2DD7DBCA27F5B24000EAC707 /* Sources */,
+				2DD7DBCB27F5B24000EAC707 /* Frameworks */,
+				2DD7DBCC27F5B24000EAC707 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DD7DBD027F5B24000EAC707 /* PBXTargetDependency */,
+			);
+			name = "Mobile Up GalleryUITests";
+			productName = "Mobile Up GalleryUITests";
+			productReference = 2DD7DBCE27F5B24000EAC707 /* Mobile Up GalleryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DD7DBA327F5B23A00EAC707 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					2DD7DBAA27F5B23A00EAC707 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2DD7DBC327F5B24000EAC707 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 2DD7DBAA27F5B23A00EAC707;
+					};
+					2DD7DBCD27F5B24000EAC707 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 2DD7DBAA27F5B23A00EAC707;
+					};
+				};
+			};
+			buildConfigurationList = 2DD7DBA627F5B23A00EAC707 /* Build configuration list for PBXProject "Mobile Up Gallery" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DD7DBA227F5B23A00EAC707;
+			productRefGroup = 2DD7DBAC27F5B23A00EAC707 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DD7DBAA27F5B23A00EAC707 /* Mobile Up Gallery */,
+				2DD7DBC327F5B24000EAC707 /* Mobile Up GalleryTests */,
+				2DD7DBCD27F5B24000EAC707 /* Mobile Up GalleryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DD7DBA927F5B23A00EAC707 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD7DBBE27F5B23E00EAC707 /* LaunchScreen.storyboard in Resources */,
+				2DD7DBBB27F5B23E00EAC707 /* Assets.xcassets in Resources */,
+				2DD7DBB627F5B23B00EAC707 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7DBC227F5B24000EAC707 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7DBCC27F5B24000EAC707 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DD7DBA727F5B23A00EAC707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD7DBB327F5B23B00EAC707 /* ViewController.swift in Sources */,
+				2DD7DBB927F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld in Sources */,
+				2DD7DBAF27F5B23B00EAC707 /* AppDelegate.swift in Sources */,
+				2DD7DBB127F5B23B00EAC707 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7DBC027F5B24000EAC707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD7DBC927F5B24000EAC707 /* Mobile_Up_GalleryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7DBCA27F5B24000EAC707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD7DBD527F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift in Sources */,
+				2DD7DBD327F5B24000EAC707 /* Mobile_Up_GalleryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DD7DBC627F5B24000EAC707 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DD7DBAA27F5B23A00EAC707 /* Mobile Up Gallery */;
+			targetProxy = 2DD7DBC527F5B24000EAC707 /* PBXContainerItemProxy */;
+		};
+		2DD7DBD027F5B24000EAC707 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DD7DBAA27F5B23A00EAC707 /* Mobile Up Gallery */;
+			targetProxy = 2DD7DBCF27F5B24000EAC707 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DD7DBB427F5B23B00EAC707 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DD7DBB527F5B23B00EAC707 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2DD7DBBC27F5B23E00EAC707 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DD7DBBD27F5B23E00EAC707 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DD7DBD627F5B24000EAC707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DD7DBD727F5B24000EAC707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DD7DBD927F5B24000EAC707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LB6HJ44JRX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mobile Up Gallery/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Gilde.Mobile-Up-Gallery";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DD7DBDA27F5B24000EAC707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LB6HJ44JRX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mobile Up Gallery/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Gilde.Mobile-Up-Gallery";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DD7DBDC27F5B24000EAC707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LB6HJ44JRX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Gilde.Mobile-Up-GalleryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobile Up Gallery.app/Mobile Up Gallery";
+			};
+			name = Debug;
+		};
+		2DD7DBDD27F5B24000EAC707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LB6HJ44JRX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Gilde.Mobile-Up-GalleryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobile Up Gallery.app/Mobile Up Gallery";
+			};
+			name = Release;
+		};
+		2DD7DBDF27F5B24000EAC707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LB6HJ44JRX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Gilde.Mobile-Up-GalleryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mobile Up Gallery";
+			};
+			name = Debug;
+		};
+		2DD7DBE027F5B24000EAC707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LB6HJ44JRX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Gilde.Mobile-Up-GalleryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mobile Up Gallery";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DD7DBA627F5B23A00EAC707 /* Build configuration list for PBXProject "Mobile Up Gallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DD7DBD627F5B24000EAC707 /* Debug */,
+				2DD7DBD727F5B24000EAC707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DD7DBD827F5B24000EAC707 /* Build configuration list for PBXNativeTarget "Mobile Up Gallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DD7DBD927F5B24000EAC707 /* Debug */,
+				2DD7DBDA27F5B24000EAC707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DD7DBDB27F5B24000EAC707 /* Build configuration list for PBXNativeTarget "Mobile Up GalleryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DD7DBDC27F5B24000EAC707 /* Debug */,
+				2DD7DBDD27F5B24000EAC707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DD7DBDE27F5B24000EAC707 /* Build configuration list for PBXNativeTarget "Mobile Up GalleryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DD7DBDF27F5B24000EAC707 /* Debug */,
+				2DD7DBE027F5B24000EAC707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2DD7DBB727F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2DD7DBB827F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodel */,
+			);
+			currentVersion = 2DD7DBB827F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodel */;
+			path = Mobile_Up_Gallery.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2DD7DBA327F5B23A00EAC707 /* Project object */;
+}
