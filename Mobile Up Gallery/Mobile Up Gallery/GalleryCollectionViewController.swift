@@ -31,9 +31,10 @@ final class GalleryCollectionViewController: UICollectionViewController {
         logoutButton.tintColor = UIColor(named: "black")
         navigationItem.rightBarButtonItem = logoutButton
 
-        galleryLabel.text = "Mobile Up Gallery"
-        galleryLabel.textColor = UIColor(named: "black")
-        navigationItem.title = galleryLabel.text
+        navigationItem.title = "Mobile Up Gallery"
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "black")]
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "white")
         
         requestSender.getPhotosData(callback: { photosArray in
             DispatchQueue.main.async {

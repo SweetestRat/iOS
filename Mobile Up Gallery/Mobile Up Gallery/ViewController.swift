@@ -61,14 +61,15 @@ final class MainViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             galleryLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -48),
-            galleryLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1 / 5),
+            galleryLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1 / 3),
             galleryLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            galleryLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 164),
-
+//            galleryLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height/3),
+            NSLayoutConstraint(item: galleryLabel as Any, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1 / 2, constant: 0),
+            
             loginVKButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -48),
             loginVKButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1 / 14),
             loginVKButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginVKButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+            loginVKButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50)
         ])
     }
 
