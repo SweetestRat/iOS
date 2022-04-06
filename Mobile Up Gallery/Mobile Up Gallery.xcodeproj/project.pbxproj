@@ -105,6 +105,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D84FAC127FDFCBF00EE95A8 /* System files */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7DBAE27F5B23B00EAC707 /* AppDelegate.swift */,
+				2DD7DBB027F5B23B00EAC707 /* SceneDelegate.swift */,
+				2DD7DBBA27F5B23E00EAC707 /* Assets.xcassets */,
+				2DD7DBB427F5B23B00EAC707 /* Main.storyboard */,
+				2DD7DBBC27F5B23E00EAC707 /* LaunchScreen.storyboard */,
+				2DD7DBBF27F5B23E00EAC707 /* Info.plist */,
+				2DD7DBB727F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld */,
+			);
+			path = "System files";
+			sourceTree = "<group>";
+		};
 		2DD7DBA227F5B23A00EAC707 = {
 			isa = PBXGroup;
 			children = (
@@ -130,18 +144,12 @@
 		2DD7DBAD27F5B23A00EAC707 /* Mobile Up Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				2DD7DBAE27F5B23B00EAC707 /* AppDelegate.swift */,
-				2DD7DBB027F5B23B00EAC707 /* SceneDelegate.swift */,
+				2D84FAC127FDFCBF00EE95A8 /* System files */,
 				2DD7DBB227F5B23B00EAC707 /* ViewController.swift */,
 				2DF6A29027FAF1D000365C34 /* GalleryCollectionViewController.swift */,
 				2DF6A28E27FAEE2500365C34 /* PhotoProfileViewController.swift */,
 				2DF6A29927FC395300365C34 /* Requests */,
 				2DF6A29827FC394400365C34 /* DTO */,
-				2DD7DBBA27F5B23E00EAC707 /* Assets.xcassets */,
-				2DD7DBB427F5B23B00EAC707 /* Main.storyboard */,
-				2DD7DBBC27F5B23E00EAC707 /* LaunchScreen.storyboard */,
-				2DD7DBBF27F5B23E00EAC707 /* Info.plist */,
-				2DD7DBB727F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld */,
 			);
 			path = "Mobile Up Gallery";
 			sourceTree = "<group>";

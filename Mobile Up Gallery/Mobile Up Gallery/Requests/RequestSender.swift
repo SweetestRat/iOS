@@ -77,6 +77,8 @@ final class RequestSender {
             return photos
            
         } catch {
+            self.alert.message = error.localizedDescription
+            self.alert.present(self.alert, animated: true, completion: {})
             print("! JSON parsing error" + error.localizedDescription)
             return []
         }

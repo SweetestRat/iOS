@@ -7,18 +7,13 @@
 
 import UIKit
 import VK_ios_sdk
-import CoreData
 
 final class MainViewController: UIViewController {
     var galleryLabel: UILabel!
     var loginVKButton: UIButton!
     var galleryCollectionVC: GalleryCollectionViewController!
     var galleryNavigationController: UINavigationController!
-    var container: NSPersistentContainer!
     var token: String!
-    
-    let white = UIColor(red: 249 / 255, green: 249 / 255, blue: 249 / 255, alpha: 1)
-    let black = UIColor(red: 18 / 255, green: 18 / 255, blue: 18 / 255, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,28 +27,27 @@ final class MainViewController: UIViewController {
         galleryCollectionVC = GalleryCollectionViewController(collectionViewLayout: layout)
         galleryNavigationController = UINavigationController(rootViewController: galleryCollectionVC)
         galleryNavigationController.modalPresentationStyle = .fullScreen
-//        galleryNavigationController.title = "Navigation Controller"
         
         let vkInstance = VKSdk.initialize(withAppId: "8122135")
         vkInstance?.uiDelegate = self as VKSdkUIDelegate
         vkInstance?.register(self as VKSdkDelegate)
         
-        VKSdk.forceLogout() // for testing
+//        VKSdk.forceLogout() // for testing
         
         galleryLabel = UILabel()
         loginVKButton = UIButton()
 
-        view.backgroundColor = white
+        view.backgroundColor = UIColor(named: "white")
         galleryLabel.text = "MobileUp Gallery"
         galleryLabel.numberOfLines = 2
-        galleryLabel.textColor = black
+        galleryLabel.textColor = UIColor(named: "black")
         galleryLabel.font = UIFont.systemFont(ofSize: 48, weight: UIFont.Weight.bold)
         galleryLabel.textAlignment = .left
 
-        loginVKButton.backgroundColor = black
+        loginVKButton.backgroundColor = UIColor(named: "black")
         loginVKButton.setTitle("Вход через VK", for: .normal)
         loginVKButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)
-        loginVKButton.tintColor = white
+        loginVKButton.tintColor = UIColor(named: "white")
         loginVKButton.layer.cornerRadius = 8
 
         loginVKButton.addTarget(self, action: #selector(vkAuth), for: .touchUpInside)
@@ -69,7 +63,7 @@ final class MainViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             galleryLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -48),
-            galleryLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1 / 6),
+            galleryLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1 / 5),
             galleryLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             galleryLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 164),
 
@@ -80,6 +74,8 @@ final class MainViewController: UIViewController {
         ])
     }
 
+    // MARK: - objc functions
+    
     @objc
     func vkAuth() {
         VKSdk.wakeUpSession([], complete: { [self] (state: VKAuthorizationState, error: Error?) in
@@ -103,9 +99,9 @@ final class MainViewController: UIViewController {
         present(galleryNavigationController, animated: true, completion: {})
         }
     }
-    
-    
 }
+
+// MARK: - VkSdk Delegate
 
 extension MainViewController: VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkShouldPresent(_ controller: UIViewController!) {
