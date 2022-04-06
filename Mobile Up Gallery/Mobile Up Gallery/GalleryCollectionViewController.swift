@@ -72,9 +72,6 @@ final class GalleryCollectionViewController: UICollectionViewController {
             print("Unable to dequeue PhotoCell")
             return PhotoCell()
         }
-
-        // Configure the cell
-
         // download logos
 
         let url = photos[indexPath.item].url

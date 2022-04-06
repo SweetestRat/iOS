@@ -32,8 +32,6 @@ final class MainViewController: UIViewController {
         vkInstance?.uiDelegate = self as VKSdkUIDelegate
         vkInstance?.register(self as VKSdkDelegate)
         
-//        VKSdk.forceLogout() // for testing
-        
         galleryLabel = UILabel()
         loginVKButton = UIButton()
 

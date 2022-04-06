@@ -18,12 +18,6 @@ final class PhotoProfileViewController: UIViewController {
         shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareAction))
         navigationItem.rightBarButtonItem = shareButton
         self.navigationController?.navigationBar.tintColor = .black
-//        navigationItem.backBarButtonItem = UIBarButtonItem( // HOW TO REMOVE THE TITLE????
-//            image: UIImage(named: "back"),
-//            style: .plain,
-//            target: self,
-//            action: #selector(popToPrevious)
-//        )
         
         imageView.backgroundColor = .systemBlue
         

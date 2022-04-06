@@ -18,13 +18,7 @@ final class PhotoCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         contentView.clipsToBounds = true
         imageView.contentMode = .scaleToFill
-//        imageView.con
         imageView.layer.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-        
-        NSLayoutConstraint.activate([
-//            image.widthAnchor.constraint(equalTo: contentView.frame.width),
-//            image.heightAnchor.constraint(equalTo: contentView)
-        ])
     }
     
     required init?(coder: NSCoder) {
