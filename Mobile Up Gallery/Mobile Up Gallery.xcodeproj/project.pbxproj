@@ -17,6 +17,12 @@
 		2DD7DBC927F5B24000EAC707 /* Mobile_Up_GalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBC827F5B24000EAC707 /* Mobile_Up_GalleryTests.swift */; };
 		2DD7DBD327F5B24000EAC707 /* Mobile_Up_GalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBD227F5B24000EAC707 /* Mobile_Up_GalleryUITests.swift */; };
 		2DD7DBD527F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7DBD427F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift */; };
+		2DF6A28F27FAEE2500365C34 /* PhotoProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6A28E27FAEE2500365C34 /* PhotoProfileViewController.swift */; };
+		2DF6A29127FAF1D000365C34 /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6A29027FAF1D000365C34 /* GalleryCollectionViewController.swift */; };
+		2DF6A29327FB13F000365C34 /* WhatToPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6A29227FB13F000365C34 /* WhatToPresent.swift */; };
+		2DF6A29527FB247600365C34 /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6A29427FB247600365C34 /* RequestSender.swift */; };
+		2DF6A29727FC387E00365C34 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6A29627FC387E00365C34 /* Photo.swift */; };
+		2DF6A29B27FC452000365C34 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6A29A27FC452000365C34 /* PhotoCell.swift */; };
 		400874D75734099C36C59ECC /* Pods_Mobile_Up_GalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D528F4CDDA745F48E98E14 /* Pods_Mobile_Up_GalleryTests.framework */; };
 		981DC54130856DA768627A05 /* Pods_Mobile_Up_Gallery_Mobile_Up_GalleryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157C02156298C6CA66947CAB /* Pods_Mobile_Up_Gallery_Mobile_Up_GalleryUITests.framework */; };
 		BA321C8115828150FBF0F63B /* Pods_Mobile_Up_Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169985BAE52DAE53D6BBAF75 /* Pods_Mobile_Up_Gallery.framework */; };
@@ -56,6 +62,12 @@
 		2DD7DBCE27F5B24000EAC707 /* Mobile Up GalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Up GalleryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD7DBD227F5B24000EAC707 /* Mobile_Up_GalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Up_GalleryUITests.swift; sourceTree = "<group>"; };
 		2DD7DBD427F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Up_GalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2DF6A28E27FAEE2500365C34 /* PhotoProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProfileViewController.swift; sourceTree = "<group>"; };
+		2DF6A29027FAF1D000365C34 /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
+		2DF6A29227FB13F000365C34 /* WhatToPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToPresent.swift; sourceTree = "<group>"; };
+		2DF6A29427FB247600365C34 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
+		2DF6A29627FC387E00365C34 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		2DF6A29A27FC452000365C34 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3095420E130295D03F71CB5A /* Pods-Mobile Up Gallery-Mobile Up GalleryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile Up Gallery-Mobile Up GalleryUITests.release.xcconfig"; path = "Target Support Files/Pods-Mobile Up Gallery-Mobile Up GalleryUITests/Pods-Mobile Up Gallery-Mobile Up GalleryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		43D528F4CDDA745F48E98E14 /* Pods_Mobile_Up_GalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobile_Up_GalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95921A0214CD46309DF4E98C /* Pods-Mobile Up GalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile Up GalleryTests.release.xcconfig"; path = "Target Support Files/Pods-Mobile Up GalleryTests/Pods-Mobile Up GalleryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,8 +133,12 @@
 				2DD7DBAE27F5B23B00EAC707 /* AppDelegate.swift */,
 				2DD7DBB027F5B23B00EAC707 /* SceneDelegate.swift */,
 				2DD7DBB227F5B23B00EAC707 /* ViewController.swift */,
-				2DD7DBB427F5B23B00EAC707 /* Main.storyboard */,
+				2DF6A29027FAF1D000365C34 /* GalleryCollectionViewController.swift */,
+				2DF6A28E27FAEE2500365C34 /* PhotoProfileViewController.swift */,
+				2DF6A29927FC395300365C34 /* Requests */,
+				2DF6A29827FC394400365C34 /* DTO */,
 				2DD7DBBA27F5B23E00EAC707 /* Assets.xcassets */,
+				2DD7DBB427F5B23B00EAC707 /* Main.storyboard */,
 				2DD7DBBC27F5B23E00EAC707 /* LaunchScreen.storyboard */,
 				2DD7DBBF27F5B23E00EAC707 /* Info.plist */,
 				2DD7DBB727F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld */,
@@ -145,6 +161,24 @@
 				2DD7DBD427F5B24000EAC707 /* Mobile_Up_GalleryUITestsLaunchTests.swift */,
 			);
 			path = "Mobile Up GalleryUITests";
+			sourceTree = "<group>";
+		};
+		2DF6A29827FC394400365C34 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2DF6A29627FC387E00365C34 /* Photo.swift */,
+				2DF6A29A27FC452000365C34 /* PhotoCell.swift */,
+				2DF6A29227FB13F000365C34 /* WhatToPresent.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		2DF6A29927FC395300365C34 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				2DF6A29427FB247600365C34 /* RequestSender.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		464236743B4749E4F6B3E01F /* Frameworks */ = {
@@ -409,9 +443,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF6A29527FB247600365C34 /* RequestSender.swift in Sources */,
 				2DD7DBB327F5B23B00EAC707 /* ViewController.swift in Sources */,
 				2DD7DBB927F5B23B00EAC707 /* Mobile_Up_Gallery.xcdatamodeld in Sources */,
+				2DF6A29727FC387E00365C34 /* Photo.swift in Sources */,
+				2DF6A29327FB13F000365C34 /* WhatToPresent.swift in Sources */,
+				2DF6A28F27FAEE2500365C34 /* PhotoProfileViewController.swift in Sources */,
+				2DF6A29B27FC452000365C34 /* PhotoCell.swift in Sources */,
 				2DD7DBAF27F5B23B00EAC707 /* AppDelegate.swift in Sources */,
+				2DF6A29127FAF1D000365C34 /* GalleryCollectionViewController.swift in Sources */,
 				2DD7DBB127F5B23B00EAC707 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +640,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,7 +650,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -629,6 +670,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -638,7 +680,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,22 +7,38 @@
 
 import UIKit
 import VK_ios_sdk
+import CoreData
 
 final class MainViewController: UIViewController {
     var galleryLabel: UILabel!
     var loginVKButton: UIButton!
-
+    var galleryCollectionVC: GalleryCollectionViewController!
+    var galleryNavigationController: UINavigationController!
+    var container: NSPersistentContainer!
+    var token: String!
+    
     let white = UIColor(red: 249 / 255, green: 249 / 255, blue: 249 / 255, alpha: 1)
     let black = UIColor(red: 18 / 255, green: 18 / 255, blue: 18 / 255, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: (view.frame.width/2)-2, height: (view.frame.height/4)-2)
+        layout.minimumInteritemSpacing = 2
+        layout.minimumLineSpacing = 2
+        layout.scrollDirection = .vertical
+        
+        galleryCollectionVC = GalleryCollectionViewController(collectionViewLayout: layout)
+        galleryNavigationController = UINavigationController(rootViewController: galleryCollectionVC)
+        galleryNavigationController.modalPresentationStyle = .fullScreen
+//        galleryNavigationController.title = "Navigation Controller"
+        
         let vkInstance = VKSdk.initialize(withAppId: "8122135")
         vkInstance?.uiDelegate = self as VKSdkUIDelegate
         vkInstance?.register(self as VKSdkDelegate)
         
-//        VKSdk.forceLogout()
+        VKSdk.forceLogout() // for testing
         
         galleryLabel = UILabel()
         loginVKButton = UIButton()
@@ -40,7 +56,7 @@ final class MainViewController: UIViewController {
         loginVKButton.tintColor = white
         loginVKButton.layer.cornerRadius = 8
 
-        loginVKButton.addTarget(self, action: #selector(openWebView), for: .touchUpInside)
+        loginVKButton.addTarget(self, action: #selector(vkAuth), for: .touchUpInside)
 
         [
             galleryLabel,
@@ -65,43 +81,30 @@ final class MainViewController: UIViewController {
     }
 
     @objc
-    func openWebView() {
-        print("open func")
-        VKSdk.wakeUpSession([], complete: { (state: VKAuthorizationState, error: Error?) in
+    func vkAuth() {
+        VKSdk.wakeUpSession([], complete: { [self] (state: VKAuthorizationState, error: Error?) in
 
             print("waking up session")
-            
             if state != .authorized {
                 VKSdk.authorize([])
-            }
-
-            switch(state) {
-            case .authorized:
-                print("authorized")
-            case .unknown:
-                print("unknown")
-            case .initialized:
-                print("initialized")
-            case .pending:
-                print("pending")
-            case .external:
-                print("external")
-            case .safariInApp:
-                print("safariInApp")
-            case .webview:
-                print("webview")
-            case .error:
-                print("error")
-            @unknown default:
-                print("?")
+            } else {
+                present(self.galleryNavigationController, animated: true, completion: {})
             }
             
-//            if error != nil {
-//                let errorAlert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-//                self.present(errorAlert, animated: true, completion: {})
-//            }
+            if error != nil {
+                let errorAlert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                present(errorAlert, animated: true, completion: {})
+            }
         })
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if VKSdk.isLoggedIn() {
+        present(galleryNavigationController, animated: true, completion: {})
+        }
+    }
+    
+    
 }
 
 extension MainViewController: VKSdkDelegate, VKSdkUIDelegate {
@@ -115,7 +118,9 @@ extension MainViewController: VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         if result.token != nil {
             print("Пользователь успешно авторизован")
-            //VKSdk.setAccessToken(result.token)
+            VKSdk.setAccessToken(result.token)
+            token = VKSdk.accessToken().accessToken
+            UserDefaults.standard.set(token, forKey: "token")
         } else if result.error != nil {
             print("Пользователь отменил авторизацию или произошла ошибка")
         }

@@ -11,6 +11,7 @@ import VK_ios_sdk
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let whatToPresent = WhatToPresent()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -18,16 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let mainScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: mainScene)
+        let rootController = whatToPresent.getRootController()
         
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = rootController as UIViewController
         window?.makeKeyAndVisible()
-        
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         guard let url = URLContexts.first?.url else { return }
         VKSdk.processOpen(url, fromApplication: UIApplication.OpenURLOptionsKey.sourceApplication.rawValue)
     }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
