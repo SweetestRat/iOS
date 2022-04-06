@@ -25,7 +25,10 @@ final class PhotoProfileViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+//            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+//            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageView.topAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.topAnchor)
         ])
     }
     
