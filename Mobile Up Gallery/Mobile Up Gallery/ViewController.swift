@@ -29,23 +29,22 @@ final class MainViewController: UIViewController {
         galleryNavigationController.modalPresentationStyle = .fullScreen
         
         let vkInstance = VKSdk.initialize(withAppId: "8122135")
-        vkInstance?.uiDelegate = self as VKSdkUIDelegate
-        vkInstance?.register(self as VKSdkDelegate)
+        vkInstance?.uiDelegate = self
+        vkInstance?.register(self)
         
         galleryLabel = UILabel()
         loginVKButton = UIButton()
 
-        view.backgroundColor = UIColor(named: "white")
+        view.backgroundColor = .white
         galleryLabel.text = "MobileUp Gallery"
         galleryLabel.numberOfLines = 2
         galleryLabel.textColor = UIColor(named: "black")
-        galleryLabel.font = UIFont.systemFont(ofSize: 48, weight: UIFont.Weight.bold)
-        galleryLabel.textAlignment = .left
+        galleryLabel.font = .systemFont(ofSize: 48, weight: .bold)
 
         loginVKButton.backgroundColor = UIColor(named: "black")
         loginVKButton.setTitle("Вход через VK", for: .normal)
         loginVKButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)
-        loginVKButton.tintColor = UIColor(named: "white")
+        loginVKButton.tintColor = .white
         loginVKButton.layer.cornerRadius = 8
 
         loginVKButton.addTarget(self, action: #selector(vkAuth), for: .touchUpInside)
@@ -73,6 +72,12 @@ final class MainViewController: UIViewController {
         ])
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if VKSdk.isLoggedIn() {
+        present(galleryNavigationController, animated: true, completion: {})
+        }
+    }
+    
     // MARK: - objc functions
     
     @objc
@@ -88,15 +93,9 @@ final class MainViewController: UIViewController {
             
             if error != nil {
                 let errorAlert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                present(errorAlert, animated: true, completion: {})
+                present(errorAlert, animated: true, completion: nil)
             }
         })
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if VKSdk.isLoggedIn() {
-        present(galleryNavigationController, animated: true, completion: {})
-        }
     }
 }
 

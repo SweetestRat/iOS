@@ -22,7 +22,7 @@ final class GalleryCollectionViewController: UICollectionViewController {
 
         modalPresentationStyle = .fullScreen
 
-        collectionView.backgroundColor = UIColor(named: "white")
+        collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "photoCell")
@@ -34,7 +34,7 @@ final class GalleryCollectionViewController: UICollectionViewController {
         navigationItem.title = "Mobile Up Gallery"
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "black")]
-        self.navigationController?.navigationBar.tintColor = UIColor(named: "white")
+        self.navigationController?.navigationBar.tintColor = .white
         
         requestSender.getPhotosData(callback: { photosArray in
             DispatchQueue.main.async {
@@ -50,9 +50,7 @@ final class GalleryCollectionViewController: UICollectionViewController {
     func logout() {
         VKSdk.forceLogout()
         UserDefaults.standard.removeObject(forKey: "token")
-        let mainVC = MainViewController()
-        mainVC.modalPresentationStyle = .fullScreen
-        present(mainVC, animated: true, completion: nil)
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
 
     // MARK: - UICollectionViewDataSource

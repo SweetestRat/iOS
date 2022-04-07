@@ -15,12 +15,12 @@ final class RequestSender {
     
     func getPhotosData(callback: @escaping ([Photo]) -> Void) {
         
-        let METHOD = "photos.get"
-        let PARAMS = "owner_id=-128666765&album_id=266276915"
-        let API_VERSION = "5.131"
-        guard let TOKEN = UserDefaults.standard.string(forKey: "token") else { return }
+        let methos = "photos.get"
+        let params = "owner_id=-128666765&album_id=266276915"
+        let apiVersion = "5.131"
+        guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         
-        guard let url = URL(string: "https://api.vk.com/method/\(METHOD)?\(PARAMS)&access_token=\(TOKEN)&v=\(API_VERSION)") else { return }
+        guard let url = URL(string: "https://api.vk.com/method/\(methos)?\(params)&access_token=\(token)&v=\(apiVersion)") else { return }
 
         let photosData = URLSession.shared.dataTask(with: url) { [self] data, response, error in
             guard
@@ -77,8 +77,8 @@ final class RequestSender {
             return photos
            
         } catch {
-            self.alert.message = error.localizedDescription
-            self.alert.present(self.alert, animated: true, completion: {})
+            alert.message = error.localizedDescription
+            alert.present(self.alert, animated: true, completion: {})
             print("! JSON parsing error" + error.localizedDescription)
             return []
         }
