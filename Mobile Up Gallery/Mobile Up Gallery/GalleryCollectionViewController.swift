@@ -50,7 +50,10 @@ final class GalleryCollectionViewController: UICollectionViewController {
     func logout() {
         VKSdk.forceLogout()
         UserDefaults.standard.removeObject(forKey: "token")
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        
+        let mainVC = MainViewController()
+        mainVC.modalPresentationStyle = .fullScreen
+        present(mainVC, animated: false, completion: nil)
     }
 
     // MARK: - UICollectionViewDataSource
