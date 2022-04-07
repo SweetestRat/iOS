@@ -5,15 +5,7 @@ target 'Mobile Up Gallery' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'VK-ios-sdk', '~> 1.6.2'
+
   # Pods for Mobile Up Gallery
-
-  target 'Mobile Up GalleryTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Mobile Up GalleryUITests' do
-    # Pods for testing
-  end
 
 end
